@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "location": "Location One",
+    "name": "Property One",
+    "price": 100000
+  },
+  {
+    "id": 2,
+    "location": "Location Two",
+    "name": "Property Two",
+    "price": 200000
+  }
+]
