@@ -1,9 +1,10 @@
-import { ThemeProvider } from "@/components/theme-provider";
-import type { Metadata } from "next";
 import "./globals.css";
-import { Inter as FontSans } from "next/font/google";
+
 import { cn } from "@/lib/utils";
-import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
+import { Inter as FontSans } from "next/font/google";
+import Providers from "@/components/providers";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -11,8 +12,9 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "irealty",
-  description: "irealty",
+  title: "iRealty",
+  description:
+    "iRealty. Real Estate, Reimagined. Marketplace for buying and selling properties.",
 };
 
 export default function RootLayout({
@@ -20,7 +22,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  console.log("test");
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -29,16 +30,9 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-          <Toaster />
-        </ThemeProvider>
+        <Providers>{children}</Providers>
       </body>
+      <Analytics />
     </html>
   );
 }

@@ -267,6 +267,8 @@ export function Dashboard() {
                 <TabsTrigger value="archived" className="hidden sm:flex">
                   Archived
                 </TabsTrigger>
+                <TabsTrigger value="grid">Grid</TabsTrigger>
+                <TabsTrigger value="list">List</TabsTrigger>
               </TabsList>
               <div className="ml-auto flex items-center gap-2">
                 <DropdownMenu>
