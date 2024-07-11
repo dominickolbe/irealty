@@ -62,7 +62,7 @@ export default function Home() {
                 </h1>
 
                 <h2 className="text-1xl font-bold tracking-tighter sm:text-xl md:text-3xl">
-                  Discover over 20000+ properties for sale and rent.
+                  Discover over 20,000+ properties for sale and rent.
                 </h2>
                 <p className="max-w-[500px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Explore our Properties. Buy, Rent, Sell, and Invest in your
