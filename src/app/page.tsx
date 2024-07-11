@@ -278,7 +278,7 @@ function HeroCarousel() {
   );
 }
 
-function BoltIcon(props) {
+function BoltIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -298,7 +298,7 @@ function BoltIcon(props) {
   );
 }
 
-function BriefcaseIcon(props) {
+function BriefcaseIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -318,7 +318,7 @@ function BriefcaseIcon(props) {
   );
 }
 
-function CogIcon(props) {
+function CogIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -350,7 +350,7 @@ function CogIcon(props) {
   );
 }
 
-function LayersIcon(props) {
+function LayersIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -370,7 +370,7 @@ function LayersIcon(props) {
     </svg>
   );
 }
-function RocketIcon(props) {
+function RocketIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -392,7 +392,7 @@ function RocketIcon(props) {
   );
 }
 
-function ShieldIcon(props) {
+function ShieldIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -411,7 +411,7 @@ function ShieldIcon(props) {
   );
 }
 
-function XIcon(props) {
+function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
