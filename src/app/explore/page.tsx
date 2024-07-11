@@ -4,6 +4,7 @@ import ThemeChanger from "@/components/ThemeChanger";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { File, PlusCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import PropertiesGrid from "./properties-grid";
 
 export default function DashboardPage() {
   return (
@@ -32,6 +33,7 @@ export default function DashboardPage() {
           </div> */}
         </div>
         <TabsContent value="grid">
+          <PropertiesGrid />
           {/* <ProductsTable
           products={products}
           offset={newOffset ?? 0}
