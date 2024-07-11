@@ -258,15 +258,9 @@ export function Dashboard() {
           </DropdownMenu>
         </header>
         <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
-          <Tabs defaultValue="all">
+          <Tabs defaultValue="grid">
             <div className="flex items-center">
               <TabsList>
-                <TabsTrigger value="all">All</TabsTrigger>
-                <TabsTrigger value="active">Active</TabsTrigger>
-                <TabsTrigger value="draft">Draft</TabsTrigger>
-                <TabsTrigger value="archived" className="hidden sm:flex">
-                  Archived
-                </TabsTrigger>
                 <TabsTrigger value="grid">Grid</TabsTrigger>
                 <TabsTrigger value="list">List</TabsTrigger>
               </TabsList>
@@ -306,7 +300,7 @@ export function Dashboard() {
                 </Button>
               </div>
             </div>
-            <TabsContent value="all">
+            <TabsContent value="grid">
               <Card x-chunk="dashboard-06-chunk-0">
                 <CardHeader>
                   <CardTitle>Products</CardTitle>
