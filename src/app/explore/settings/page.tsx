@@ -1,3 +1,4 @@
+import ThemeToggle from "@/components/ThemeToggle";
 import {
   Card,
   CardContent,
@@ -13,7 +14,9 @@ export default function SettingsPage() {
         <CardTitle>Settings</CardTitle>
         <CardDescription>View all settings and preferences.</CardDescription>
       </CardHeader>
-      <CardContent></CardContent>
+      <CardContent>
+        <ThemeToggle />
+      </CardContent>
     </Card>
   );
 }
