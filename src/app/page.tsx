@@ -62,7 +62,7 @@ export default function Home() {
                 </h1>
 
                 <h2 className="text-1xl font-bold tracking-tighter sm:text-xl md:text-3xl">
-                  Discover over 20,000+ properties for sale and rent.
+                  Discover over 200,000+ properties for sale and rent.
                 </h2>
                 <p className="max-w-[500px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Explore our Properties. Buy, Rent, Sell, and Invest in your
@@ -91,7 +91,7 @@ export default function Home() {
                   Discover Your Dream Property
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Browse 20,000+ listings spanning charming Spanish villas to
+                  Browse 200,000+ listings spanning charming Spanish villas to
                   chic Parisian apartments. Your perfect property awaits.
                 </p>
               </div>
@@ -167,7 +167,7 @@ export default function Home() {
                 Ready to Get Started?
               </h2>
               <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Browse 20,000+ listings and find your dream property completely
+                Browse 200,000+ listings and find your dream property completely
                 FREE.
               </p>
             </div>
