@@ -2,14 +2,23 @@
 
 import { BathIcon, BedIcon } from "@/components/icons";
 
+import { FilterState } from "@/components/property-filters";
 import Link from "next/link";
 import { PaginationControls } from "@/components/pagination-controls";
 import PropertiesData from "@/data/propertyData.json";
 import { Separator } from "@/components/ui/separator";
 import { formatCurrency } from "@/utils/format";
 import { usePagination } from "@/hooks/use-pagination";
+import { usePropertyFilters } from "@/hooks/use-property-filters";
 
-export default function PropertiesGrid() {
+interface PropertiesGridProps {
+  filters: FilterState;
+}
+
+export default function PropertiesGrid({ filters }: PropertiesGridProps) {
+  // Apply filters to the data
+  const filteredData = usePropertyFilters(PropertiesData, filters);
+
   const {
     currentData: properties,
     currentPage,
@@ -21,7 +30,7 @@ export default function PropertiesGrid() {
     goToPage,
     setItemsPerPage,
   } = usePagination({
-    data: PropertiesData,
+    data: filteredData,
     itemsPerPage: 12, // 3 rows of 4 items each
   });
 

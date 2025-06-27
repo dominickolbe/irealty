@@ -11,14 +11,23 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 
 import { Badge } from "@/components/ui/badge";
+import { FilterState } from "@/components/property-filters";
 import Link from "next/link";
 import { PaginationControls } from "@/components/pagination-controls";
 import PropertiesData from "@/data/propertyData.json";
 import { Separator } from "@/components/ui/separator";
 import { formatCurrency } from "@/utils/format";
 import { usePagination } from "@/hooks/use-pagination";
+import { usePropertyFilters } from "@/hooks/use-property-filters";
 
-export default function PropertiesList() {
+interface PropertiesListProps {
+  filters: FilterState;
+}
+
+export default function PropertiesList({ filters }: PropertiesListProps) {
+  // Apply filters to the data
+  const filteredData = usePropertyFilters(PropertiesData, filters);
+
   const {
     currentData: properties,
     currentPage,
@@ -30,7 +39,7 @@ export default function PropertiesList() {
     goToPage,
     setItemsPerPage,
   } = usePagination({
-    data: PropertiesData,
+    data: filteredData,
     itemsPerPage: 8, // Show 8 properties per page in list view
   });
 

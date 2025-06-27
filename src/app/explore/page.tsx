@@ -1,4 +1,7 @@
+"use client";
+
 import { File, PlusCircle } from "lucide-react";
+import { FilterState, PropertyFilters } from "@/components/property-filters";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { Button } from "@/components/ui/button";
@@ -7,8 +10,14 @@ import PropertiesGrid from "./properties-grid";
 import PropertiesList from "./properties-list";
 import ThemeChanger from "@/components/ThemeChanger";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { useState } from "react";
 
 export default function DashboardPage() {
+  const [filters, setFilters] = useState<FilterState>({
+    rooms: [],
+    priceRange: { min: null, max: null },
+  });
+
   return (
     <div className="min-h-screen bg-background">
       {/* <Dashboard /> */}
@@ -24,31 +33,36 @@ export default function DashboardPage() {
                 List View
               </TabsTrigger>
             </TabsList>
-            {/* <div className="ml-auto flex items-center gap-2">
-              <Button size="sm" variant="outline" className="h-8 gap-1">
-                <File className="h-3.5 w-3.5" />
-                <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                  Export
-                </span>
-              </Button>
-              <Button size="sm" className="h-8 gap-1">
-                <PlusCircle className="h-3.5 w-3.5" />
-                <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                  Add Product
-                </span>
-              </Button>
-            </div> */}
+
+            {/* Filters */}
+            <div className="flex items-center gap-2">
+              <PropertyFilters filters={filters} onFiltersChange={setFilters} />
+              {/* <div className="ml-auto flex items-center gap-2">
+                <Button size="sm" variant="outline" className="h-8 gap-1">
+                  <File className="h-3.5 w-3.5" />
+                  <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
+                    Export
+                  </span>
+                </Button>
+                <Button size="sm" className="h-8 gap-1">
+                  <PlusCircle className="h-3.5 w-3.5" />
+                  <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
+                    Add Product
+                  </span>
+                </Button>
+              </div> */}
+            </div>
           </div>
 
           <TabsContent value="grid" className="mt-0">
             <div className="space-y-6">
-              <PropertiesGrid />
+              <PropertiesGrid filters={filters} />
             </div>
           </TabsContent>
 
           <TabsContent value="list" className="mt-0">
             <div className="space-y-6">
-              <PropertiesList />
+              <PropertiesList filters={filters} />
             </div>
           </TabsContent>
         </Tabs>
