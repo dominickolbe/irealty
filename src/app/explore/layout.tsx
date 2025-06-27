@@ -35,6 +35,7 @@ import type { Metadata } from "next";
 import { NavItem } from "./nav-item";
 import Providers from "@/components/providers";
 import { SearchInput } from "./search";
+import { Suspense } from "react";
 import ThemeToggle from "@/components/ThemeToggle";
 import { cn } from "@/lib/utils";
 
@@ -61,7 +62,13 @@ export default function ExploreLayout({
         <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
           <MobileNav />
           <DashboardBreadcrumb />
-          <SearchInput />
+          <Suspense
+            fallback={
+              <div className="ml-auto flex-1 md:grow-0 w-[200px] lg:w-[336px] h-10 bg-muted animate-pulse rounded-lg" />
+            }
+          >
+            <SearchInput />
+          </Suspense>
           <ThemeToggle />
           {/* <User /> */}
         </header>
