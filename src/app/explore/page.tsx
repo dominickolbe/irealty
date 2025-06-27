@@ -3,20 +3,29 @@
 import { File, PlusCircle } from "lucide-react";
 import { FilterState, PropertyFilters } from "@/components/property-filters";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Dashboard } from "@/components/Dashboard";
+import PropertiesData from "@/data/propertyData.json";
 import PropertiesGrid from "./properties-grid";
 import PropertiesList from "./properties-list";
 import ThemeChanger from "@/components/ThemeChanger";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { useState } from "react";
+import { usePropertySearch } from "@/hooks/use-property-search";
+import { useSearchParams } from "next/navigation";
 
 export default function DashboardPage() {
+  const searchParams = useSearchParams();
+  const searchQuery = searchParams.get("q") || "";
+
   const [filters, setFilters] = useState<FilterState>({
     rooms: [],
     priceRange: { min: null, max: null },
   });
+
+  // Apply search to the data
+  const searchedData = usePropertySearch(PropertiesData, searchQuery);
 
   return (
     <div className="min-h-screen bg-background">
@@ -33,6 +42,14 @@ export default function DashboardPage() {
                 List View
               </TabsTrigger>
             </TabsList>
+
+            {/* Search Results Info */}
+            {searchQuery && (
+              <div className="text-sm text-muted-foreground">
+                {searchedData.length} propiedades encontradas para "
+                {searchQuery}"
+              </div>
+            )}
 
             {/* Filters */}
             <div className="flex items-center gap-2">
@@ -56,13 +73,13 @@ export default function DashboardPage() {
 
           <TabsContent value="grid" className="mt-0">
             <div className="space-y-6">
-              <PropertiesGrid filters={filters} />
+              <PropertiesGrid filters={filters} data={searchedData} />
             </div>
           </TabsContent>
 
           <TabsContent value="list" className="mt-0">
             <div className="space-y-6">
-              <PropertiesList filters={filters} />
+              <PropertiesList filters={filters} data={searchedData} />
             </div>
           </TabsContent>
         </Tabs>

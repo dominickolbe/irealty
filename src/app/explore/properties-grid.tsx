@@ -17,19 +17,34 @@ import { Badge } from "@/components/ui/badge";
 import { FilterState } from "@/components/property-filters";
 import Link from "next/link";
 import { PaginationControls } from "@/components/pagination-controls";
-import PropertiesData from "@/data/propertyData.json";
 import { Separator } from "@/components/ui/separator";
 import { formatCurrency } from "@/utils/format";
 import { usePagination } from "@/hooks/use-pagination";
 import { usePropertyFilters } from "@/hooks/use-property-filters";
 
-interface PropertiesGridProps {
-  filters: FilterState;
+interface Property {
+  id: string;
+  rooms: number;
+  price: number;
+  bathrooms: number;
+  size: number;
+  description: string;
+  title: string;
+  created_at: string;
+  updated_at: string;
+  latitude: string;
+  longitude: string;
+  imported_id: string;
 }
 
-export default function PropertiesGrid({ filters }: PropertiesGridProps) {
+interface PropertiesGridProps {
+  filters: FilterState;
+  data: Property[];
+}
+
+export default function PropertiesGrid({ filters, data }: PropertiesGridProps) {
   // Apply filters to the data
-  const filteredData = usePropertyFilters(PropertiesData, filters);
+  const filteredData = usePropertyFilters(data, filters);
 
   const {
     currentData: properties,
@@ -73,6 +88,7 @@ export default function PropertiesGrid({ filters }: PropertiesGridProps) {
               />
               {/* Price overlay on image */}
               <div className="absolute top-3 right-3 bg-primary/90 text-primary-foreground px-2 py-1 rounded-md text-sm font-semibold flex items-center gap-1">
+                <EuroIcon className="w-3 h-3" />
                 {formatCurrency(property.price)}
               </div>
 
