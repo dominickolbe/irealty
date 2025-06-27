@@ -1,10 +1,10 @@
 import "./globals.css";
 
-import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
-import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
+import type { Metadata } from "next";
 import Providers from "@/components/providers";
+import { cn } from "@/lib/utils";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -31,8 +31,8 @@ export default function RootLayout({
         )}
       >
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
-      <Analytics />
     </html>
   );
 }

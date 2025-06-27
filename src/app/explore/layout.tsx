@@ -1,11 +1,5 @@
 import "../globals.css";
 
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { Analytics } from "@vercel/analytics/react";
-import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
-import Providers from "@/components/providers";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -14,8 +8,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { LogoIcon } from "@/components/icons";
-import { NavItem } from "./nav-item";
 import {
   Home,
   LineChart,
@@ -27,15 +19,24 @@ import {
   User,
   Users2,
 } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
+import { Analytics } from "@vercel/analytics/react";
 import { Button } from "@/components/ui/button";
+import { Inter as FontSans } from "next/font/google";
+import Link from "next/link";
+import { LogoIcon } from "@/components/icons";
+import type { Metadata } from "next";
+import { NavItem } from "./nav-item";
+import Providers from "@/components/providers";
 import { SearchInput } from "./search";
 import ThemeToggle from "@/components/ThemeToggle";
+import { cn } from "@/lib/utils";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -48,40 +49,27 @@ export const metadata: Metadata = {
     "iRealty. Real Estate, Reimagined. Marketplace for buying and selling properties.",
 };
 
-export default function RootLayout({
+export default function ExploreLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}
-      >
-        <Providers>
-          <main className="flex min-h-screen w-full flex-col">
-            <DesktopNav />
-            <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
-              <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
-                <MobileNav />
-                <DashboardBreadcrumb />
-                <SearchInput />
-                <ThemeToggle />
-                {/* <User /> */}
-              </header>
-              <main className="grid flex-1 items-start gap-2 p-4 sm:px-6 sm:py-0 md:gap-4">
-                {children}
-              </main>
-            </div>
-            <Analytics />
-          </main>
-        </Providers>
-      </body>
-      <Analytics />
-    </html>
+    <main className="flex min-h-screen w-full flex-col">
+      <DesktopNav />
+      <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
+        <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+          <MobileNav />
+          <DashboardBreadcrumb />
+          <SearchInput />
+          <ThemeToggle />
+          {/* <User /> */}
+        </header>
+        <main className="grid flex-1 items-start gap-2 p-4 sm:px-6 sm:py-0 md:gap-4">
+          {children}
+        </main>
+      </div>
+    </main>
   );
 }
 
@@ -198,16 +186,14 @@ function DashboardBreadcrumb() {
   return (
     <Breadcrumb className="hidden md:flex">
       <BreadcrumbList>
-        <BreadcrumbItem>
+        <BreadcrumbItem className="hidden md:block">
           <BreadcrumbLink asChild>
-            <Link href="/explore">Explore</Link>
+            <Link href="/">Home</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
-        <BreadcrumbSeparator />
+        <BreadcrumbSeparator className="hidden md:block" />
         <BreadcrumbItem>
-          <BreadcrumbLink asChild>
-            <Link href="#">All Properties</Link>
-          </BreadcrumbLink>
+          <BreadcrumbPage>Dashboard</BreadcrumbPage>
         </BreadcrumbItem>
       </BreadcrumbList>
     </Breadcrumb>
