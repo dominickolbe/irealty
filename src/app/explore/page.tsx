@@ -2,8 +2,8 @@
 
 import { File, PlusCircle } from "lucide-react";
 import { FilterState, PropertyFilters } from "@/components/property-filters";
+import { Suspense, useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Dashboard } from "@/components/Dashboard";
@@ -15,7 +15,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { usePropertySearch } from "@/hooks/use-property-search";
 import { useSearchParams } from "next/navigation";
 
-export default function DashboardPage() {
+function DashboardContent() {
   const searchParams = useSearchParams();
   const searchQuery = searchParams.get("q") || "";
 
@@ -85,5 +85,42 @@ export default function DashboardPage() {
         </Tabs>
       </div>
     </div>
+  );
+}
+
+export default function DashboardPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-background">
+          <div className="container mx-auto px-4 py-6">
+            <div className="animate-pulse">
+              <div className="h-8 bg-muted rounded mb-6"></div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="bg-card rounded-lg overflow-hidden shadow-sm border border-border"
+                  >
+                    <div className="h-48 bg-muted"></div>
+                    <div className="p-4 space-y-3">
+                      <div className="h-4 bg-muted rounded"></div>
+                      <div className="h-3 bg-muted rounded"></div>
+                      <div className="grid grid-cols-3 gap-2">
+                        <div className="h-8 bg-muted rounded"></div>
+                        <div className="h-8 bg-muted rounded"></div>
+                        <div className="h-8 bg-muted rounded"></div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    >
+      <DashboardContent />
+    </Suspense>
   );
 }
