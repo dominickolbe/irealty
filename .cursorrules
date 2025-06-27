@@ -1,0 +1,240 @@
+# Cursor Rules for Next.js TypeScript Project with shadcn/ui and Tailwind CSS
+
+## Project Overview
+This is a Next.js 15 project using TypeScript, shadcn/ui components, Tailwind CSS, and modern React patterns. The project follows the App Router architecture and uses Turbopack for development.
+
+## File Structure & Naming Conventions
+
+### Directory Structure
+- `app/` - Next.js App Router pages and layouts
+- `components/` - Reusable React components
+  - `ui/` - shadcn/ui base components
+- `lib/` - Utility functions and configurations
+- `hooks/` - Custom React hooks
+- `public/` - Static assets
+
+### File Naming
+- Use kebab-case for file names: `my-component.tsx`
+- Use PascalCase for component names: `MyComponent`
+- Use camelCase for functions, variables, and props
+- Use UPPER_SNAKE_CASE for constants
+- Use descriptive names that clearly indicate purpose
+
+## TypeScript Best Practices
+
+### Type Definitions
+- Always define proper TypeScript interfaces for props
+- Use `interface` for object shapes, `type` for unions and intersections
+- Prefer `interface` over `type` for component props
+- Export types from dedicated type files when reused across components
+
+```typescript
+// Good
+interface ButtonProps {
+  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link'
+  size?: 'default' | 'sm' | 'lg' | 'icon'
+  children: React.ReactNode
+  onClick?: () => void
+}
+
+// Avoid
+type ButtonProps = {
+  // ...
+}
+```
+
+### Component Patterns
+- Use React.FC for functional components with explicit typing
+- Prefer destructuring props with default values
+- Use proper event typing for handlers
+
+```typescript
+const Button: React.FC<ButtonProps> = ({
+  variant = 'default',
+  size = 'default',
+  children,
+  onClick,
+  ...props
+}) => {
+  // Component implementation
+}
+```
+
+## shadcn/ui Integration
+
+### Component Usage
+- Import shadcn/ui components from `@/components/ui`
+- Use the `cn()` utility from `@/lib/utils` for conditional classes
+- Follow shadcn/ui component patterns and prop structures
+- Extend shadcn/ui components when needed, don't modify base components
+
+```typescript
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+
+const CustomButton = ({ className, ...props }: ButtonProps) => (
+  <Button className={cn("custom-styles", className)} {...props} />
+)
+```
+
+### Styling Patterns
+- Use `class-variance-authority` for component variants
+- Leverage Tailwind CSS utility classes
+- Use CSS variables for theming (already configured in globals.css)
+
+## Tailwind CSS Guidelines
+
+### Class Organization
+- Group related classes together: layout, spacing, typography, colors, etc.
+- Use arbitrary values sparingly, prefer Tailwind's design system
+- Use responsive prefixes consistently: `sm:`, `md:`, `lg:`, `xl:`
+
+### Custom Styles
+- Add custom styles in `app/globals.css`
+- Use CSS variables for consistent theming
+- Prefer Tailwind utilities over custom CSS when possible
+
+## Next.js App Router Patterns
+
+### Page Structure
+- Use `page.tsx` for route pages
+- Use `layout.tsx` for shared layouts
+- Use `loading.tsx` for loading states
+- Use `error.tsx` for error boundaries
+- Use `not-found.tsx` for 404 pages
+
+### Data Fetching
+- Use Server Components by default
+- Use `use client` directive only when necessary
+- Implement proper loading and error states
+- Use Next.js built-in caching mechanisms
+
+### File Conventions
+- Place page components in `app/[route]/page.tsx`
+- Use dynamic routes with `[param]` syntax
+- Group related routes in folders
+
+## Component Architecture
+
+### Component Hierarchy
+- Keep components small and focused
+- Use composition over inheritance
+- Implement proper prop drilling or context as needed
+- Separate business logic from presentation
+
+### State Management
+- Use React hooks for local state
+- Use `useState` for simple state
+- Use `useReducer` for complex state logic
+- Consider context for shared state across components
+
+### Performance
+- Use `React.memo()` for expensive components
+- Implement proper dependency arrays in useEffect
+- Use `useCallback` and `useMemo` when appropriate
+- Lazy load components when beneficial
+
+## Code Quality Standards
+
+### Imports
+- Group imports: React, external libraries, internal components, types
+- Use absolute imports with `@/` prefix
+- Remove unused imports
+
+```typescript
+// React and Next.js
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+
+// External libraries
+import { cn } from 'clsx'
+
+// Internal components
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+
+// Types
+import type { ComponentProps } from 'react'
+```
+
+### Error Handling
+- Implement proper error boundaries
+- Use try-catch blocks for async operations
+- Provide meaningful error messages
+- Handle loading and error states gracefully
+
+### Accessibility
+- Use semantic HTML elements
+- Implement proper ARIA attributes
+- Ensure keyboard navigation works
+- Test with screen readers
+
+## Development Workflow
+
+### Code Organization
+- Keep related files close together
+- Use index files for clean imports
+- Group utilities by functionality
+- Maintain consistent file structure
+
+### Testing Considerations
+- Write testable components
+- Use proper prop interfaces for type safety
+- Implement error boundaries for robustness
+- Consider testing utilities and patterns
+
+### Performance Optimization
+- Use Next.js Image component for images
+- Implement proper caching strategies
+- Optimize bundle size with dynamic imports
+- Use React DevTools for profiling
+
+## Dependencies and Tools
+
+### Key Libraries
+- Next.js 15 with App Router
+- React 19 with modern patterns
+- TypeScript for type safety
+- Tailwind CSS for styling
+- shadcn/ui for component library
+- Radix UI for accessible primitives
+- Lucide React for icons
+- Recharts for data visualization
+- Zod for schema validation
+
+### Development Tools
+- ESLint for code linting
+- Turbopack for fast development
+- TypeScript for type checking
+- Tailwind CSS for utility-first styling
+
+## Common Patterns
+
+### Form Handling
+- Use controlled components
+- Implement proper validation with Zod
+- Handle form submission states
+- Provide user feedback
+
+### Data Fetching
+- Use Server Components for initial data
+- Implement proper loading states
+- Handle errors gracefully
+- Use SWR or React Query for client-side data
+
+### Styling
+- Use Tailwind CSS utilities
+- Leverage shadcn/ui components
+- Implement responsive design
+- Use CSS variables for theming
+
+## Best Practices Summary
+
+1. **TypeScript First**: Always use proper typing
+2. **Component Composition**: Build reusable, composable components
+3. **Performance**: Optimize for performance from the start
+4. **Accessibility**: Make components accessible by default
+5. **Consistency**: Follow established patterns and conventions
+6. **Testing**: Write testable, maintainable code
+7. **Documentation**: Document complex logic and APIs
+8. **Error Handling**: Implement proper error boundaries and handling 
