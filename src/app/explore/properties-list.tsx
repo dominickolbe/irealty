@@ -7,6 +7,12 @@ import {
   EyeIcon,
   MapPinIcon,
   PhoneIcon,
+  SquareMeterIcon,
+  EuroIcon,
+  StarIcon,
+  BuildingIcon,
+  VillaIcon,
+  TerrainIcon,
 } from "@/components/icons";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -52,8 +58,8 @@ export default function PropertiesList({ filters }: PropertiesListProps) {
             key={property.id}
             className="hover:shadow-md transition-all duration-200 border-border/60"
           >
-            <CardContent className="p-6">
-              <div className="flex flex-col lg:flex-row gap-6">
+            <CardContent className="p-4">
+              <div className="flex gap-4">
                 {/* Property Image */}
                 <div className="flex-shrink-0">
                   <Link href="#" className="block" prefetch={false}>
@@ -62,18 +68,18 @@ export default function PropertiesList({ filters }: PropertiesListProps) {
                       alt="Property Image"
                       width={200}
                       height={150}
-                      className="w-48 h-32 object-cover rounded-lg transition-transform duration-200 hover:scale-105"
+                      className="w-40 h-28 object-cover rounded-lg transition-transform duration-200 hover:scale-105"
                     />
                   </Link>
                 </div>
 
                 {/* Property Details */}
                 <div className="flex-1 min-w-0">
-                  <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-start justify-between mb-3">
+                  <div className="flex flex-col h-full">
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between mb-2">
                         <div className="flex-1 min-w-0">
-                          <h3 className="text-xl font-semibold truncate mb-2">
+                          <h3 className="text-lg font-semibold truncate mb-1">
                             <Link
                               href="#"
                               className="hover:text-primary transition-colors"
@@ -85,100 +91,123 @@ export default function PropertiesList({ filters }: PropertiesListProps) {
                                 }m² - ${formatCurrency(property.price)}`}
                             </Link>
                           </h3>
-                          <div className="flex items-center text-muted-foreground text-sm mb-3">
-                            <MapPinIcon className="w-4 h-4 mr-1" />
-                            <span>
-                              {property.title.includes("en ")
-                                ? property.title.split("en ")[1].split(" -")[0]
-                                : `Location: ${property.latitude}, ${property.longitude}`}
-                            </span>
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center gap-4">
+                              <div className="flex items-center text-muted-foreground text-sm">
+                                <MapPinIcon className="w-4 h-4 mr-1" />
+                                <span>
+                                  {property.title.includes("en ")
+                                    ? property.title
+                                        .split("en ")[1]
+                                        .split(" -")[0]
+                                    : `Location: ${property.latitude}, ${property.longitude}`}
+                                </span>
+                              </div>
+                              {/* Property Stats */}
+                              <div className="flex items-center gap-3 text-muted-foreground text-sm">
+                                <div className="flex items-center gap-1 bg-muted/30 px-2 py-1 rounded text-xs">
+                                  <BedIcon className="w-3 h-3 text-primary" />
+                                  <span className="font-medium">
+                                    {property.rooms}
+                                  </span>
+                                  <span>hab</span>
+                                </div>
+                                <div className="flex items-center gap-1 bg-muted/30 px-2 py-1 rounded text-xs">
+                                  <BathIcon className="w-3 h-3 text-primary" />
+                                  <span className="font-medium">
+                                    {property.bathrooms}
+                                  </span>
+                                  <span>baños</span>
+                                </div>
+                                <div className="flex items-center gap-1 bg-muted/30 px-2 py-1 rounded text-xs">
+                                  <SquareMeterIcon className="w-3 h-3 text-primary" />
+                                  <span className="font-medium">
+                                    {property.size}
+                                  </span>
+                                  <span>m²</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Property Description */}
+                          <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
+                            {property.description.length > 120
+                              ? `${property.description.substring(0, 120)}...`
+                              : property.description}
+                          </p>
+
+                          {/* Property Tags */}
+                          <div className="flex flex-wrap gap-1 mb-3">
+                            {/* Property Type Badge */}
+                            <Badge
+                              variant="secondary"
+                              className="text-xs flex items-center gap-1"
+                            >
+                              {property.rooms === 0 ? (
+                                <TerrainIcon className="w-3 h-3" />
+                              ) : property.rooms >= 4 ? (
+                                <VillaIcon className="w-3 h-3" />
+                              ) : (
+                                <BuildingIcon className="w-3 h-3" />
+                              )}
+                              {property.rooms === 0
+                                ? "Terreno"
+                                : property.rooms >= 4
+                                ? "Villa"
+                                : property.rooms >= 2
+                                ? "Piso"
+                                : "Estudio"}
+                            </Badge>
+                            {property.size > 200 && (
+                              <Badge
+                                variant="outline"
+                                className="text-xs flex items-center gap-1"
+                              >
+                                <StarIcon className="w-3 h-3" />
+                                Espacioso
+                              </Badge>
+                            )}
+                            {property.rooms >= 4 && (
+                              <Badge variant="outline" className="text-xs">
+                                Large Property
+                              </Badge>
+                            )}
+                            {property.price > 500000 && (
+                              <Badge variant="outline" className="text-xs">
+                                Premium
+                              </Badge>
+                            )}
+                            {property.bathrooms >= 3 && (
+                              <Badge variant="outline" className="text-xs">
+                                Luxury Bathrooms
+                              </Badge>
+                            )}
                           </div>
                         </div>
-                        <div className="text-primary font-bold text-xl ml-4">
+                        <div className="text-primary font-bold text-2xl ml-4">
                           {formatCurrency(property.price)}
                         </div>
                       </div>
-
-                      {/* Property Stats */}
-                      <div className="flex items-center gap-6 text-muted-foreground mb-4">
-                        <div className="flex items-center gap-1">
-                          <BedIcon className="w-4 h-4" />
-                          <span className="text-sm font-medium">
-                            {property.rooms} Beds
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <BathIcon className="w-4 h-4" />
-                          <span className="text-sm font-medium">
-                            {property.bathrooms} Baths
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <span className="text-sm font-medium">
-                            {property.size}m²
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <CalendarIcon className="w-4 h-4" />
-                          <span className="text-sm font-medium">
-                            Listed:{" "}
-                            {new Date(property.created_at).toLocaleDateString()}
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Property Description */}
-                      <p className="text-sm text-muted-foreground line-clamp-2 mb-4">
-                        {property.description.length > 150
-                          ? `${property.description.substring(0, 150)}...`
-                          : property.description}
-                      </p>
-
-                      {/* Property Tags */}
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        <Badge variant="secondary" className="text-xs">
-                          ID: {property.id}
-                        </Badge>
-                        {property.rooms >= 4 && (
-                          <Badge variant="outline" className="text-xs">
-                            Large Property
-                          </Badge>
-                        )}
-                        {property.price > 500000 && (
-                          <Badge variant="outline" className="text-xs">
-                            Premium
-                          </Badge>
-                        )}
-                        {property.size > 200 && (
-                          <Badge variant="outline" className="text-xs">
-                            Spacious
-                          </Badge>
-                        )}
-                        {property.bathrooms >= 3 && (
-                          <Badge variant="outline" className="text-xs">
-                            Luxury Bathrooms
-                          </Badge>
-                        )}
-                      </div>
                     </div>
 
-                    {/* Action Buttons */}
-                    <div className="flex flex-col gap-2 lg:flex-shrink-0">
+                    {/* Action Buttons - Higher Up */}
+                    <div className="flex justify-end gap-2 mt-4">
                       <Link
                         href="#"
-                        className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-primary border border-primary rounded-md hover:bg-primary hover:text-primary-foreground transition-colors"
+                        className="inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-primary border border-primary/20 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors"
                         prefetch={false}
                       >
                         <EyeIcon className="w-4 h-4 mr-2" />
-                        View Details
+                        Ver Detalles
                       </Link>
                       <Link
                         href="#"
-                        className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-muted-foreground border border-border rounded-md hover:bg-muted transition-colors"
+                        className="inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-muted-foreground border border-border rounded-md hover:bg-muted transition-colors"
                         prefetch={false}
                       >
                         <PhoneIcon className="w-4 h-4 mr-2" />
-                        Contact Agent
+                        Contactar
                       </Link>
                     </div>
                   </div>
