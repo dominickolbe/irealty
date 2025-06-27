@@ -18,6 +18,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 import { Badge } from "@/components/ui/badge";
 import { FilterState } from "@/components/property-filters";
+import Image from "next/image";
 import Link from "next/link";
 import { PaginationControls } from "@/components/pagination-controls";
 import { formatCurrency } from "@/utils/format";
@@ -77,7 +78,7 @@ export default function PropertiesList({ filters, data }: PropertiesListProps) {
                 {/* Property Image */}
                 <div className="flex-shrink-0">
                   <Link href="#" className="block" prefetch={false}>
-                    <img
+                    <Image
                       src="/placeholder.svg"
                       alt="Property Image"
                       width={200}

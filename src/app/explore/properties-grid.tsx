@@ -15,6 +15,7 @@ import {
 
 import { Badge } from "@/components/ui/badge";
 import { FilterState } from "@/components/property-filters";
+import Image from "next/image";
 import Link from "next/link";
 import { PaginationControls } from "@/components/pagination-controls";
 import { Separator } from "@/components/ui/separator";
@@ -79,7 +80,7 @@ export default function PropertiesGrid({ filters, data }: PropertiesGridProps) {
             className="bg-card rounded-lg overflow-hidden shadow-sm border border-border transition-all duration-300 hover:shadow-lg hover:border-primary/20 hover:-translate-y-1 group"
           >
             <Link href="#" className="block relative" prefetch={false}>
-              <img
+              <Image
                 src="/placeholder.svg"
                 alt="Property Image"
                 width={400}

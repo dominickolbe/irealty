@@ -46,8 +46,8 @@ export default function DashboardPage() {
             {/* Search Results Info */}
             {searchQuery && (
               <div className="text-sm text-muted-foreground">
-                {searchedData.length} propiedades encontradas para "
-                {searchQuery}"
+                {searchedData.length} propiedades encontradas para &ldquo;
+                {searchQuery}&rdquo;
               </div>
             )}
 
