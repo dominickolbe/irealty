@@ -54,13 +54,16 @@ export default function PropertiesGrid({ filters }: PropertiesGridProps) {
             </Link>
             <div className="p-4">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg font-semibold line-clamp-1">
+                <h3 className="text-lg font-semibold line-clamp-2">
                   <Link
                     href="#"
                     className="hover:text-primary transition-colors"
                     prefetch={false}
                   >
-                    123 Main St, Anytown USA
+                    {property.title ||
+                      `${property.rooms} hab. ${
+                        property.size
+                      }m² - ${formatCurrency(property.price)}`}
                   </Link>
                 </h3>
                 <div className="text-primary font-bold text-lg">

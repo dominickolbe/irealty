@@ -8,6 +8,7 @@ interface Property {
   bathrooms: number;
   size: number;
   description: string;
+  title: string;
   created_at: string;
   updated_at: string;
   latitude: string;

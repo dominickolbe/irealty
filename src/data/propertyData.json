@@ -10,6 +10,7 @@
     "price": 830000,
     "rooms": 2,
     "size": 127,
+    "title": "Piso 2 hab. 2 baños 127m² en Madrid - 830K€",
     "updated_at": "2024-07-10 01:00:51"
   },
   {
@@ -23,6 +24,7 @@
     "price": 85000,
     "rooms": 4,
     "size": 135,
+    "title": "Piso 4 hab. 2 baños 135m² Terraza en Tocina - 85K€",
     "updated_at": "2024-07-10 00:57:39"
   },
   {
@@ -36,6 +38,7 @@
     "price": 91000,
     "rooms": 3,
     "size": 111,
+    "title": "Piso 3 hab. 2 baños 111m² Garaje, Centro en Torreblanca - 91K€",
     "updated_at": "2024-07-10 00:57:38"
   },
   {
@@ -49,6 +52,7 @@
     "price": 60000,
     "rooms": 1,
     "size": 60,
+    "title": "Piso 1 hab. 1 baños 60m² Terraza, A/C en Sevilla - 60K€",
     "updated_at": "2024-07-10 00:57:36"
   },
   {
@@ -62,6 +66,7 @@
     "price": 85000,
     "rooms": 3,
     "size": 80,
+    "title": "Piso 3 hab. 1 baños 80m² en Sevilla - 85K€",
     "updated_at": "2024-07-10 00:57:36"
   },
   {
@@ -75,6 +80,7 @@
     "price": 560000,
     "rooms": 4,
     "size": 346,
+    "title": "Villa 4 hab. 2 baños 346m² Piscina, Garaje en Sevilla - 560K€",
     "updated_at": "2024-07-10 00:57:35"
   },
   {
@@ -88,6 +94,7 @@
     "price": 112500,
     "rooms": 2,
     "size": 66,
+    "title": "Piso 2 hab. 1 baños 66m² Terraza, A/C en Bellavista - 113K€",
     "updated_at": "2024-07-10 00:57:35"
   },
   {
@@ -101,6 +108,7 @@
     "price": 280000,
     "rooms": 4,
     "size": 165,
+    "title": "Villa 4 hab. 3 baños 165m² Piscina, Terraza en Sevilla - 280K€",
     "updated_at": "2024-07-10 00:57:34"
   },
   {
@@ -114,6 +122,7 @@
     "price": 860000,
     "rooms": 6,
     "size": 374,
+    "title": "Villa 6 hab. 5 baños 374m² Piscina, Garaje en Sevilla - 860K€",
     "updated_at": "2024-07-10 00:57:29"
   },
   {
@@ -127,6 +136,7 @@
     "price": 270000,
     "rooms": 3,
     "size": 180,
+    "title": "Villa 3 hab. 3 baños 180m² Piscina, Terraza en Huercal-Overa - 270K€",
     "updated_at": "2024-07-10 00:57:26"
   },
   {
@@ -140,6 +150,7 @@
     "price": 175000,
     "rooms": 0,
     "size": 452,
+    "title": "Terreno 452m² Garaje, Vistas Mar - 175K€",
     "updated_at": "2024-07-10 00:57:26"
   },
   {
@@ -153,6 +164,7 @@
     "price": 597000,
     "rooms": 4,
     "size": 407,
+    "title": "Local Comercial 4 hab. 3 baños 407m² Piscina, Garaje en Torre del Mar - 597K€",
     "updated_at": "2024-07-10 00:57:24"
   },
   {
@@ -166,12 +178,13 @@
     "price": 395000,
     "rooms": 3,
     "size": 87,
+    "title": "Piso 3 hab. 2 baños 87m² Piscina, Garaje en Nerja - 395K€",
     "updated_at": "2024-07-10 00:57:24"
   },
   {
     "bathrooms": 2,
     "created_at": "2024-07-10 00:57:22",
-    "description": "¡VIVIENDA EN  LA ZONA DE MIJAS GOLF!\n\nCasa adosada de 2 dormitorios; salón amplio y cocina independiente totalmente equipada; 2 baño completo; patio interior amplio y piscina comunitaria.   \n\nZona rodeada de todo tipo de servicios, tiendas, colegios, centros comerciales, parques infantiles, plazas, etc.\n\nEL PRECIO DE VENTA DEL INMUEBLE AQUÍ EXPUESTO NO INCLUYE LOS HONORARIOS DE INTERMEDIACIÓN INMOBILIARIA (3% MÁS IVA, MÍNIMO DE 3.630 IVA INCLUIDO) NI LOS GASTOS RELACIONADOS CON DICHA COMPRA: NOTARÍA, REGISTRO E I. T. P.\n\nNuestro departamento financiero realiza estudios sin compromiso.\n\nPara más información póngase en contacto con nosotros a través de este anuncio, llámenos a  o envíenos un WhatsApp al.",
+    "description": "¡VIVIENDA EN  LA ZONA DE MIJAS GOLF!\n\nCasa adosada de 2 dormitorios; salón amplio y cocina independiente totalmente equipada; 2 baño completo; patio interior amplio y piscina comunitaria.    \n\nZona rodeada de todo tipo de servicios, tiendas, colegios, centros comerciales, parques infantiles, plazas, etc.\n\nEL PRECIO DE VENTA DEL INMUEBLE AQUÍ EXPUESTO NO INCLUYE LOS HONORARIOS DE INTERMEDIACIÓN INMOBILIARIA (3% MÁS IVA, MÍNIMO DE 3.630 IVA INCLUIDO) NI LOS GASTOS RELACIONADOS CON DICHA COMPRA: NOTARÍA, REGISTRO E I. T. P.\n\nNuestro departamento financiero realiza estudios sin compromiso.\n\nPara más información póngase en contacto con nosotros a través de este anuncio, llámenos a  o envíenos un WhatsApp al.",
     "id": "-4P4vpQL",
     "imported_id": "103629703-i",
     "latitude": "36.557982",
@@ -179,6 +192,7 @@
     "price": 235000,
     "rooms": 2,
     "size": 106,
+    "title": "Casa Adosada 2 hab. 2 baños 106m² Piscina, Centro en Mijas - 235K€",
     "updated_at": "2024-07-10 00:57:22"
   },
   {
@@ -192,6 +206,7 @@
     "price": 1395000,
     "rooms": 4,
     "size": 770,
+    "title": "Villa 4 hab. 4 baños 770m² Piscina, Garaje en Estepona - 1.4M€",
     "updated_at": "2024-07-10 00:57:19"
   },
   {
@@ -205,6 +220,7 @@
     "price": 2690000,
     "rooms": 5,
     "size": 630,
+    "title": "Villa 5 hab. 7 baños 630m² Piscina, Terraza en Marbella - 2.7M€",
     "updated_at": "2024-07-10 00:57:16"
   },
   {
@@ -218,6 +234,7 @@
     "price": 985000,
     "rooms": 3,
     "size": 127,
+    "title": "Piso 3 hab. 3 baños 127m² Piscina, Garaje en Marbella - 985K€",
     "updated_at": "2024-07-10 00:57:16"
   },
   {
@@ -231,6 +248,7 @@
     "price": 325000,
     "rooms": 0,
     "size": 500,
+    "title": "Local Comercial 500m² Centro en Málaga - 325K€",
     "updated_at": "2024-07-10 00:57:08"
   },
   {
@@ -244,6 +262,7 @@
     "price": 699000,
     "rooms": 6,
     "size": 397,
+    "title": "Villa 6 hab. 5 baños 397m² Piscina, Garaje en Alhaurín - 699K€",
     "updated_at": "2024-07-10 00:57:01"
   },
   {
@@ -257,6 +276,7 @@
     "price": 298750,
     "rooms": 2,
     "size": 116,
+    "title": "Piso 2 hab. 2 baños 116m² Piscina, Garaje - 299K€",
     "updated_at": "2024-07-10 00:56:59"
   },
   {
@@ -270,6 +290,7 @@
     "price": 475000,
     "rooms": 3,
     "size": 179,
+    "title": "Ático 3 hab. 2 baños 179m² Piscina, Garaje en Málaga - 475K€",
     "updated_at": "2024-07-10 00:56:58"
   },
   {
@@ -283,6 +304,7 @@
     "price": 360000,
     "rooms": 2,
     "size": 100,
+    "title": "Terreno 2 hab. 2 baños 100m² Piscina, Terraza en Marbella - 360K€",
     "updated_at": "2024-07-10 00:56:58"
   },
   {
@@ -296,6 +318,7 @@
     "price": 510000,
     "rooms": 6,
     "size": 380,
+    "title": "Villa 6 hab. 4 baños 380m² Piscina, Garaje - 510K€",
     "updated_at": "2024-07-10 00:56:55"
   },
   {
@@ -309,6 +332,7 @@
     "price": 950000,
     "rooms": 5,
     "size": 770,
+    "title": "Ático 5 hab. 2 baños 770m² Garaje, Jardín en Madrid - 950K€",
     "updated_at": "2024-07-10 00:56:53"
   },
   {
@@ -322,6 +346,7 @@
     "price": 900000,
     "rooms": 2,
     "size": 120,
+    "title": "Piso 2 hab. 1 baños 120m² - 900K€",
     "updated_at": "2024-07-10 00:56:52"
   },
   {
@@ -335,6 +360,7 @@
     "price": 298000,
     "rooms": 3,
     "size": 99,
+    "title": "Piso 3 hab. 2 baños 99m² Terraza, Centro en Madrid - 298K€",
     "updated_at": "2024-07-10 00:56:45"
   },
   {
@@ -348,6 +374,7 @@
     "price": 640000,
     "rooms": 0,
     "size": 164,
+    "title": "Local Comercial 1 baños 164m² en Salamanca - 640K€",
     "updated_at": "2024-07-10 00:56:43"
   },
   {
@@ -361,6 +388,7 @@
     "price": 176500,
     "rooms": 0,
     "size": 114,
+    "title": "Terreno 114m² en Madrid - 177K€",
     "updated_at": "2024-07-10 00:56:43"
   },
   {
@@ -374,12 +402,13 @@
     "price": 220000,
     "rooms": 0,
     "size": 80,
+    "title": "Local 1 baños 80m² en Madrid - 220K€",
     "updated_at": "2024-07-10 00:56:41"
   },
   {
     "bathrooms": 1,
     "created_at": "2024-07-10 00:56:41",
-    "description": "OPRTUNIDAD particular vende sin comisiones ni intermediarios. ABSTENERSE AGENCIAS piso para entrar a vivir totalmente reformado. antes 3 dormitorios ahora 2 y salón con cocina independiente equipada. pido 2° de 80m2 construidos-65útiles todo exterior con ascensor y garaje comunitario exterior posibilidad de aparcar vehículo o moto con acceso directo al ascensor. Instalación de fontanería y de electricidad nueva, con instalación de luces directas e indirectas, interruptores conmutados   tanto en paredes como en techo, con escayola en pasillo y salón estando ocultas, Aire Acondicionado con bomba frio calor en salon y habitación principal, caldera junkers,   con instalación digital  y tv, altas calidades de diseño y materiales. Puerta blindada acorazads, Ventanas oscilobatientes de climalit blancas carpintería nueva con 2 grandes armarios empotrados hechos a medida de 3 hojas. cocina equipada balay horno, induccion, campana, silestone, suelo laminado c5, terraza de 15 m con 2salidas dede cocina y salon 2 tomas de agua con riego por goteo y temporizador, radiadores empotrados. Cerramiento en aluminio en cAda extremo de la terraza, uno para zapatero trastero y otro para despensa, suelo antideslizante, toldo. Excelente comunicación a 200 metros de la Plaza Elíptica y metro urgell estación de metro con líneas 6 y 10 con diferentes autobuses andando a 2 minutos, bien comunicado con el intercambiador, barrio tranquilo con todo tipo de servicios y comercios  colegios  médicos.",
+    "description": "OPRTUNIDAD particular vende sin comisiones ni intermediarios. ABSTENERSE AGENCIAS piso para entrar a vivir totalmente reformado. antes 3 dormitorios ahora 2 y salón con cocina independiente equipada. pido 2° de 80m2 construidos-65útiles todo exterior con ascensor y garaje comunitario exterior posibilidad de aparcar vehículo o moto con acceso directo al ascensor. Instalación de fontanería y de electricidad nueva, con instalación de luces directas e indirectas, interruptores conmutados   tanto en paredes como en techo, con escayola en pasillo y salón estando ocultas, Aire Acondicionado con bomba frio calor en salon y habitación principal, caldera junkers,    con instalación digital  y tv, altas calidades de diseño y materiales. Puerta blindada acorazads, Ventanas oscilobatientes de climalit blancas carpintería nueva con 2 grandes armarios empotrados hechos a medida de 3 hojas. cocina equipada balay horno, induccion, campana, silestone, suelo laminado c5, terraza de 15 m con 2salidas dede cocina y salon 2 tomas de agua con riego por goteo y temporizador, radiadores empotrados. Cerramiento en aluminio en cAda extremo de la terraza, uno para zapatero trastero y otro para despensa, suelo antideslizante, toldo. Excelente comunicación a 200 metros de la Plaza Elíptica y metro urgell estación de metro con líneas 6 y 10 con diferentes autobuses andando a 2 minutos, bien comunicado con el intercambiador, barrio tranquilo con todo tipo de servicios y comercios   colegios   médicos.",
     "id": "-5Kl5M5O",
     "imported_id": "104871870-i",
     "latitude": "40.3858339",
@@ -387,6 +416,7 @@
     "price": 269000,
     "rooms": 2,
     "size": 80,
+    "title": "Piso 2 hab. 1 baños 80m² Garaje, Terraza en Madrid - 269K€",
     "updated_at": "2024-07-10 00:56:41"
   },
   {
@@ -400,6 +430,7 @@
     "price": 215000,
     "rooms": 0,
     "size": 85,
+    "title": "Piso 1 baños 85m² Garaje, A/C en Madrid - 215K€",
     "updated_at": "2024-07-10 00:56:40"
   },
   {
@@ -413,6 +444,7 @@
     "price": 350000,
     "rooms": 1,
     "size": 44,
+    "title": "Piso 1 hab. 1 baños 44m² Terraza en Madrid - 350K€",
     "updated_at": "2024-07-10 00:56:40"
   },
   {
@@ -426,6 +458,7 @@
     "price": 2700000,
     "rooms": 3,
     "size": 196,
+    "title": "Piso 3 hab. 3 baños 196m² Terraza, Centro en Madrid - 2.7M€",
     "updated_at": "2024-07-10 00:56:40"
   },
   {
@@ -439,6 +472,7 @@
     "price": 250000,
     "rooms": 3,
     "size": 160,
+    "title": "Villa 3 hab. 1 baños 160m² Garaje, Terraza en Madrid - 250K€",
     "updated_at": "2024-07-10 00:56:39"
   },
   {
@@ -452,6 +486,7 @@
     "price": 225000,
     "rooms": 3,
     "size": 110,
+    "title": "Villa 3 hab. 2 baños 110m² Piscina en Parla - 225K€",
     "updated_at": "2024-07-10 00:56:38"
   },
   {
@@ -465,6 +500,7 @@
     "price": 417340,
     "rooms": 0,
     "size": 208,
+    "title": "Local Comercial 208m² en Madrid - 417K€",
     "updated_at": "2024-07-10 00:56:38"
   },
   {
@@ -478,6 +514,7 @@
     "price": 1060000,
     "rooms": 3,
     "size": 250,
+    "title": "Villa 3 hab. 3 baños 250m² Piscina, Garaje en Madrid - 1.1M€",
     "updated_at": "2024-07-10 00:56:37"
   },
   {
@@ -491,6 +528,7 @@
     "price": 109500,
     "rooms": 2,
     "size": 116,
+    "title": "Piso 2 hab. 2 baños 116m² Centro, Exterior en Madrid - 110K€",
     "updated_at": "2024-07-10 00:56:34"
   },
   {
@@ -504,6 +542,7 @@
     "price": 19999,
     "rooms": 3,
     "size": 90,
+    "title": "Piso 3 hab. 1 baños 90m² Terraza, Centro en Linares - 20K€",
     "updated_at": "2024-07-10 00:56:31"
   },
   {
@@ -517,6 +556,7 @@
     "price": 600000,
     "rooms": 0,
     "size": 880,
+    "title": "Local Comercial 2 baños 880m² Garaje, Trastero - 600K€",
     "updated_at": "2024-07-10 00:56:28"
   },
   {
@@ -530,6 +570,7 @@
     "price": 122000,
     "rooms": 3,
     "size": 225,
+    "title": "Local Comercial 3 hab. 2 baños 225m² Terraza, Reformado - 122K€",
     "updated_at": "2024-07-10 00:56:28"
   },
   {
@@ -543,6 +584,7 @@
     "price": 26800,
     "rooms": 0,
     "size": 7780,
+    "title": "Terreno 7780m² en Granada - 27K€",
     "updated_at": "2024-07-10 00:56:25"
   },
   {
@@ -556,6 +598,7 @@
     "price": 339000,
     "rooms": 4,
     "size": 225,
+    "title": "Villa 4 hab. 2 baños 225m² Garaje, Terraza - 339K€",
     "updated_at": "2024-07-10 00:56:25"
   },
   {
@@ -569,6 +612,7 @@
     "price": 329000,
     "rooms": 2,
     "size": 80,
+    "title": "Ático 2 hab. 2 baños 80m² Piscina, Garaje en Granada - 329K€",
     "updated_at": "2024-07-10 00:56:23"
   },
   {
@@ -582,6 +626,7 @@
     "price": 485000,
     "rooms": 3,
     "size": 380,
+    "title": "Piso 3 hab. 3 baños 380m² Garaje, Terraza en Granada - 485K€",
     "updated_at": "2024-07-10 00:56:22"
   },
   {
@@ -595,6 +640,7 @@
     "price": 99000,
     "rooms": 3,
     "size": 95,
+    "title": "Piso 3 hab. 2 baños 95m² Terraza, A/C - 99K€",
     "updated_at": "2024-07-10 00:56:21"
   },
   {
@@ -608,6 +654,7 @@
     "price": 1180000,
     "rooms": 4,
     "size": 205,
+    "title": "Casa 4 hab. 3 baños 205m² Piscina, Garaje - 1.2M€",
     "updated_at": "2024-07-10 00:56:21"
   },
   {
@@ -621,6 +668,7 @@
     "price": 138000,
     "rooms": 3,
     "size": 95,
+    "title": "Piso 3 hab. 2 baños 95m² Luminoso en Granada - 138K€",
     "updated_at": "2024-07-10 00:56:19"
   },
   {
@@ -634,6 +682,7 @@
     "price": 155000,
     "rooms": 4,
     "size": 152,
+    "title": "Piso 4 hab. 1 baños 152m² en Córdoba - 155K€",
     "updated_at": "2024-07-10 00:56:16"
   },
   {
@@ -647,6 +696,7 @@
     "price": 95000,
     "rooms": 1,
     "size": 75,
+    "title": "Terreno 1 hab. 1 baños 75m² Piscina, Chimenea - 95K€",
     "updated_at": "2024-07-10 00:56:16"
   },
   {
@@ -660,6 +710,7 @@
     "price": 270000,
     "rooms": 3,
     "size": 110,
+    "title": "Piso 3 hab. 2 baños 110m² Piscina, Terraza en Córdoba - 270K€",
     "updated_at": "2024-07-10 00:56:14"
   },
   {
@@ -673,6 +724,7 @@
     "price": 112000,
     "rooms": 3,
     "size": 90,
+    "title": "Piso 3 hab. 2 baños 90m² Garaje, Terraza en Córdoba - 112K€",
     "updated_at": "2024-07-10 00:56:14"
   },
   {
@@ -686,6 +738,7 @@
     "price": 95000,
     "rooms": 3,
     "size": 87,
+    "title": "Piso 3 hab. 1 baños 87m² Nuevo, Exterior - 95K€",
     "updated_at": "2024-07-10 00:56:12"
   },
   {
@@ -699,6 +752,7 @@
     "price": 175000,
     "rooms": 4,
     "size": 180,
+    "title": "Piso 4 hab. 1 baños 180m² Garaje, Chimenea - 175K€",
     "updated_at": "2024-07-10 00:56:12"
   },
   {
@@ -712,6 +766,7 @@
     "price": 64999,
     "rooms": 3,
     "size": 120,
+    "title": "Piso 3 hab. 1 baños 120m² Terraza, Nuevo en Peñarroya - 65K€",
     "updated_at": "2024-07-10 00:56:11"
   },
   {
@@ -725,6 +780,7 @@
     "price": 170000,
     "rooms": 0,
     "size": 90,
+    "title": "Local 2 baños 90m² Centro en Cádiz - 170K€",
     "updated_at": "2024-07-10 00:56:09"
   },
   {
@@ -738,6 +794,7 @@
     "price": 180000,
     "rooms": 3,
     "size": 135,
+    "title": "Piso 3 hab. 2 baños 135m² - 180K€",
     "updated_at": "2024-07-10 00:56:09"
   },
   {
@@ -751,6 +808,7 @@
     "price": 340000,
     "rooms": 3,
     "size": 148,
+    "title": "Piso 3 hab. 3 baños 148m² Terraza, Exterior en Cádiz - 340K€",
     "updated_at": "2024-07-10 00:56:09"
   },
   {
@@ -764,6 +822,7 @@
     "price": 135000,
     "rooms": 5,
     "size": 156,
+    "title": "Piso 5 hab. 2 baños 156m² Terraza, A/C en Arcos de la Frontera - 135K€",
     "updated_at": "2024-07-10 00:56:06"
   },
   {
@@ -777,6 +836,7 @@
     "price": 330000,
     "rooms": 4,
     "size": 94,
+    "title": "Casa Adosada 4 hab. 2 baños 94m² Terraza - 330K€",
     "updated_at": "2024-07-10 00:56:06"
   },
   {
@@ -790,6 +850,7 @@
     "price": 130000,
     "rooms": 0,
     "size": 84304,
+    "title": "Terreno 84304m² en Algodonales - 130K€",
     "updated_at": "2024-07-10 00:56:05"
   },
   {
@@ -803,6 +864,7 @@
     "price": 684100,
     "rooms": 0,
     "size": 22512,
+    "title": "Terreno 22512m² en Madrid - 684K€",
     "updated_at": "2024-07-10 00:56:04"
   },
   {
@@ -816,6 +878,7 @@
     "price": 139000,
     "rooms": 3,
     "size": 70,
+    "title": "Terreno 3 hab. 1 baños 70m² Garaje en Somontín - 139K€",
     "updated_at": "2024-07-10 00:56:03"
   },
   {
@@ -829,6 +892,7 @@
     "price": 320000,
     "rooms": 0,
     "size": 315,
+    "title": "Local Comercial 2 baños 315m² Terraza en Garrucha - 320K€",
     "updated_at": "2024-07-10 00:56:03"
   },
   {
@@ -842,6 +906,7 @@
     "price": 180000,
     "rooms": 3,
     "size": 296,
+    "title": "Piso 3 hab. 1 baños 296m² en Almería - 180K€",
     "updated_at": "2024-07-10 00:56:03"
   },
   {
@@ -855,6 +920,7 @@
     "price": 340000,
     "rooms": 3,
     "size": 198,
+    "title": "Villa 3 hab. 3 baños 198m² Garaje, Terraza en Ciudad Jardín - 340K€",
     "updated_at": "2024-07-10 00:56:01"
   },
   {
@@ -868,6 +934,7 @@
     "price": 170000,
     "rooms": 2,
     "size": 66,
+    "title": "Ático 2 hab. 1 baños 66m² Garaje, Nuevo en Almería - 170K€",
     "updated_at": "2024-07-10 00:56:01"
   },
   {
@@ -881,6 +948,7 @@
     "price": 555000,
     "rooms": 3,
     "size": 150,
+    "title": "Piso 3 hab. 2 baños 150m² Piscina, Garaje en Madrid - 555K€",
     "updated_at": "2024-07-10 00:53:53"
   },
   {
@@ -894,6 +962,7 @@
     "price": 398000,
     "rooms": 2,
     "size": 100,
+    "title": "Local Comercial 2 hab. 2 baños 100m² Reformado, Nuevo en Madrid - 398K€",
     "updated_at": "2024-07-10 00:53:53"
   },
   {
@@ -907,6 +976,7 @@
     "price": 285000,
     "rooms": 1,
     "size": 60,
+    "title": "Piso 1 hab. 1 baños 60m² Garaje, A/C en Pinar del Rey - 285K€",
     "updated_at": "2024-07-10 00:53:53"
   }
 ]

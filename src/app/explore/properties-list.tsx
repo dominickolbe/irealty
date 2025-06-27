@@ -79,18 +79,18 @@ export default function PropertiesList({ filters }: PropertiesListProps) {
                               className="hover:text-primary transition-colors"
                               prefetch={false}
                             >
-                              {property.description
-                                .split(" ")
-                                .slice(0, 8)
-                                .join(" ")}
-                              ...
+                              {property.title ||
+                                `${property.rooms} hab. ${
+                                  property.size
+                                }m² - ${formatCurrency(property.price)}`}
                             </Link>
                           </h3>
                           <div className="flex items-center text-muted-foreground text-sm mb-3">
                             <MapPinIcon className="w-4 h-4 mr-1" />
                             <span>
-                              Location: {property.latitude},{" "}
-                              {property.longitude}
+                              {property.title.includes("en ")
+                                ? property.title.split("en ")[1].split(" -")[0]
+                                : `Location: ${property.latitude}, ${property.longitude}`}
                             </span>
                           </div>
                         </div>
